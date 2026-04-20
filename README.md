@@ -6,32 +6,19 @@
 
 <h1 align="center">Project Overview</h1>
 
-Home Credit Group is a financial institution serving underbanked borrowers. The core analytical question driving this project is:
+Home Credit Group is a global consumer finance company specializing in loans to underbanked borrowers — a population largely excluded from traditional credit markets due to limited or nonexistent credit histories. Without conventional credit scores, the core underwriting challenge is identifying which borrower characteristics reliably predict repayment behavior.
+
+That challenge defines this project:
 
 > **What combination of borrower characteristics separates low-risk borrowers from high-risk ones?**
 
-The analytical challenge was immediate — preparing **307,511 records** of raw borrower data for analysis while making defensible, business-driven decisions across:
-- **122 initial columns**
-- **7 distinct missingness patterns**
-- **Systematic encoding inconsistencies**
+The dataset spans 307,511 loan applications across 122 columns — covering borrower demographics, income and employment profile, housing status, external risk scores, and credit history indicators. Column scoping was the first and most consequential decision. Working from understood variables outward, then filling gaps through research into Home Credit's specific lending context, 97 columns were excluded across three groups: property-related columns averaging 58% missingness, contact flag columns with near-zero analytical variance, and credit bureau inquiry columns with correlations near zero against the default outcome. Several columns initially flagged for removal were retained — as the basis for flag logic, segmentation bins, or derived metrics the analysis would depend on. The 25-column working dataset was deliberately constructed, not simply reduced.
 
-Before beginning analysis, the dataset was intentionally refined:
-- Reduced from **122 → 25 columns** using evidence-based column scoping
-- Applied **five distinct NULL-handling strategies** (no blanket imputation)  
-- **Flagged anomalous records** instead of dropping them to preserve analytical signal  
-- Created **derived metrics** to support deeper exploratory analysis
+Seven distinct missingness scenarios required resolution before analysis could begin — each handled on its own terms rather than through uniform imputation.
 
-The project was structured across two phases — **data cleaning and transformation** to resolve structural, missingness, and encoding issues, followed by **exploratory data analysis** to uncover the patterns defining borrower risk.
+The project ran across two phases: data cleaning and transformation to resolve structural, missingness, and encoding issues, followed by exploratory data analysis to isolate the patterns defining borrower risk.
 
-With a fully prepared dataset, the analysis identified a clear high-risk borrower profile - borrowers who meet this criteria default at **14.30%**, which is **77% higher** than the **8.07% portfolio benchmark**:
-
-- **High-Risk Borrower Criteria**:
-  - **Under 40 years old**
-  - **Low or Mid-income**
-  - Living in **unstable housing**
-  - Carrying a **debt-to-income ratio > 0.20**
-
-The analysis produced seven findings — spanning demographic risk signals, financial ratio thresholds, and composite borrower profiles — each with direct implications for credit underwriting decisions.
+The analysis identified a clear high-risk profile. Borrowers who are under 40, Low or Mid income, living in unstable housing, and carrying a debt-to-income ratio above 0.20 default at **14.30%** — 77% above the **8.07%** portfolio benchmark. The low-risk profile defaults at **5.42%**. The **8.88 percentage point spread** directly answers the core question. Seven findings followed — spanning demographic risk signals, financial ratio thresholds, and composite borrower profiles — each with direct implications for credit underwriting decisions.
 
 ---
 <h1 align="center">Skills Demonstrated</h1>
