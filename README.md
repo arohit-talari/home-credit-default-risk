@@ -84,6 +84,11 @@ With seven missingness scenarios resolved, encoding inconsistencies corrected, a
 --- 
 <h1 align="center">Key Findings</h1>
 
+**Portfolio benchmark: 8.07% default rate across 307,511 records**
+
+Borrowers under 40, in Low or Mid income tiers, living in unstable housing, and carrying a DTI above 0.20 represent the high-risk profile — defaulting at **14.30%**, 77% above the **8.07%** portfolio benchmark. The low-risk profile defaults at **5.42%**. The **8.88 percentage point spread** between the two directly answers the core analytical question — default risk in this portfolio concentrates not within any single variable, but at the intersection of demographic, financial, and stability factors combined.
+
+
 ---
 <h1 align="center">Scripts</h1>
 
