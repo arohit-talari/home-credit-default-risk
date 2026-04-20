@@ -16,10 +16,10 @@ The analytical challenge was immediate — preparing **307,511 records** of raw 
 - **Systematic encoding inconsistencies**
 
 Before beginning analysis, the dataset was intentionally refined:
-- Reduced from **122 → 25 columns** using evidence-based feature selection  
+- Reduced from **122 → 25 columns** using evidence-based column scoping
 - Applied **five distinct NULL-handling strategies** (no blanket imputation)  
 - **Flagged anomalous records** instead of dropping them to preserve analytical signal  
-- Engineered **derived metrics** to support deeper exploratory analysis  
+- Created **derived metrics** to support deeper exploratory analysis
 
 The workflow was structured into two clear phases:
 1. **Data Cleaning & Transformation** — resolving structural, missingness, and encoding issues  
@@ -33,7 +33,7 @@ With a fully prepared dataset, the analysis identified a clear high-risk borrowe
   - Living in **unstable housing**
   - Carrying a **debt-to-income ratio > 0.20**
 
-This **8.88 percentage point spread** directly quantifies what separates high-risk from low-risk borrowers in this portfolio, providing a clear, actionable foundation for credit risk strategy.
+The analysis produced seven findings — spanning demographic risk signals, financial ratio thresholds, and composite borrower profiles — each with direct implications for credit underwriting decisions.
 
 ---
 <h1 align="center">Skills Demonstrated</h1>
