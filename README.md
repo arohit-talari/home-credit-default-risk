@@ -45,8 +45,12 @@ This **8.88 percentage point spread** directly quantifies what separates high-ri
 ---
 <h1 align="center">Tools Used</h1>
 
+<div align="center">
+
 ![MySQL](https://img.shields.io/badge/MySQL-9.x-blue)
 ![SQL](https://img.shields.io/badge/SQL-Data%20Analysis-lightgrey)
+
+</div>
 
 - MySQL (v9.5.0) — data cleaning, transformation, and analysis
 - SQL — query development and exploratory analysis
