@@ -61,6 +61,12 @@ Before analysis began, the dataset was narrowed to a single-table structure of 2
 ---
 <h1 align="center">Data Cleaning Approach</h1>
 
+The data presented three structural issues that required resolution before any cleaning strategy could be applied.
+
+Prior to loading the data, a diagnostic pass identified seven columns carrying missing values. Once loaded into MySQL, null counts across all seven returned zero — empty strings had come in as empty strings rather than NULL, meaning the null framework the entire cleaning phase depended on had to be established before a single strategy could be executed.
+
+
+
 --- 
 <h1 align="center">Key Findings</h1>
 
