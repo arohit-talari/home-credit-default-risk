@@ -50,12 +50,15 @@ The analysis uses the Home Credit Default Risk dataset — borrower-level applic
 
 Before analysis began, the dataset was narrowed to a single-table structure of 25 columns — retaining only variables with direct bearing on borrower risk assessment. The full scoping rationale and exclusion decisions are documented in the Data Cleaning section.
 
+<p align="center">
 | | |
 |---|---|
 | **Source** | Kaggle — Home Credit Default Risk |
 | **Original Size** | 307,511 rows × 122 columns |
 | **Working Dataset** | 307,511 rows × 25 columns |
 | **Structure** | Single-level analytical dataset |
+</p>
+
 ---
 <h1 align="center">Data Cleaning Approach</h1>
 
