@@ -41,3 +41,12 @@ This **8.88 percentage point spread** directly quantifies what separates high-ri
 - **[Data Cleaning Script](scripts/home_credit_data_cleaning.sql)**: Prepares the dataset for analysis by resolving missing values, correcting data inconsistencies, applying type conversions, and constructing derived variables.
 
 - **[Exploratory Data Analysis (EDA) Script](scripts/home_credit_eda.sql)**: Analyzes the cleaned dataset to identify borrower risk patterns, quantify default rate drivers, and generate the key findings presented in this project.
+
+---
+<h1 align="center">Tools Used</h1>
+
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+![SQL](https://img.shields.io/badge/SQL-Querying-lightgrey)
+
+- MySQL (v9.5.0) — data cleaning, transformation, and analysis
+- SQL — query development and exploratory analysis
