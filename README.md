@@ -23,6 +23,34 @@ The analysis identified a clear high-risk profile. Borrowers who are under 40, L
 ---
 <h1 align="center">Skills Demonstrated</h1>
 
+<h2 align="left">Missing Value Strategy</h2>
+
+Resolved seven distinct missingness scenarios across five strategies — each decision made on the specific characteristics of the column rather than a blanket rule applied uniformly across the dataset. The approach preserved analytical signal where uniform imputation would have obscured it.
+
+<h2 align="left">Financial Ratio Derivation</h2>
+
+Identified DTI and LTV as the relevant risk metrics for this analytical question and constructed both from raw source fields — neither existed in the source data. Both ratios served as the primary quantitative inputs to segmentation and threshold analysis.
+
+<h2 align="left">Threshold Analysis</h2>
+
+Determined the point at which debt burden transitions from manageable to high-risk — testing default rates across progressive DTI bands until the inflection point became clear. The result is a concrete, defensible cutoff rather than a directional observation.
+
+<h2 align="left">Composite Risk Segmentation</h2>
+
+Combined age, income tier, housing stability, and DTI into a multi-variable classification framework to define high and low-risk borrower profiles. The 8.88 percentage point spread between profiles directly answers the core analytical question and gives underwriting teams a concrete basis for risk-tiered decision making.
+
+<h2 align="left">SQL Execution</h2>
+
+Extracted statistical benchmarks, borrower segments, and risk flags across 307,511 records — applying window functions, nested subqueries, and conditional logic to support every layer of the analysis, from data preparation through final risk profiling.
+
+---
+
+
+
+
+
+
+
 ---
 <h1 align="center">Dataset</h1>
 
