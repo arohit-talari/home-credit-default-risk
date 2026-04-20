@@ -1,8 +1,10 @@
-# Home Credit Group - Characteristics of Default Behavior 
 
-SQL-based credit risk analysis transforming 300K+ borrower records through structured cleaning and EDA to quantify the drivers of default risk.
 
-## Project Overview
+<h1 align="center">Home Credit Group - Characteristics of Default Behavior </h1>
+
+---
+
+<h1 align="center">Project Overview</h1>
 
 Home Credit Group is a financial institution serving underbanked borrowers. The core analytical question driving this project is:
 
@@ -34,3 +36,5 @@ With a fully prepared dataset, the analysis identified a clear high-risk borrowe
 Borrowers who meet this criteria defaults at **14.30%**, which is **77% higher** than the **8.07% portfolio benchmark**  
 
 This **8.88 percentage point spread** directly quantifies what separates high-risk from low-risk borrowers in this portfolio, providing a clear, actionable foundation for credit risk strategy.
+
+---
