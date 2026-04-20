@@ -36,3 +36,10 @@ Borrowers who meet this criteria defaults at **14.30%**, which is **77% higher**
 This **8.88 percentage point spread** directly quantifies what separates high-risk from low-risk borrowers in this portfolio, providing a clear, actionable foundation for credit risk strategy.
 
 ---
+<h1 align="center">Scripts</h1>
+
+- [Data Cleaning Script](scripts/home_credit_data_cleaning.sql)  
+Prepares the dataset for analysis by resolving missing values, correcting data inconsistencies, applying type conversions, and constructing derived variables.
+
+- [Exploratory Data Analysis (EDA) Script](scripts/home_credit_eda.sql)  
+Analyzes the cleaned dataset to identify borrower risk patterns, quantify default rate drivers, and generate the key findings presented in this project.
