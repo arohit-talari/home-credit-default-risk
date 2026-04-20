@@ -52,5 +52,5 @@ This **8.88 percentage point spread** directly quantifies what separates high-ri
 
 </div>
 
-- MySQL (v9.5.0) — data cleaning, transformation, and analysis
-- SQL — query development and exploratory analysis
+- **MySQL (v9.5.0)** — data cleaning, transformation, and analysis
+- **SQL** — query development and exploratory analysis
