@@ -2,8 +2,6 @@
 
 <h1 align="center">Home Credit Group - Characteristics of Default Behavior </h1>
 
----
-
 <h1 align="center">Project Overview</h1>
 
 Home Credit Group is a financial institution serving underbanked borrowers. The core analytical question driving this project is:
