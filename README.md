@@ -130,10 +130,4 @@ Among organization types with more than 500 records, Transport carries the highe
 ---
 <h2 align="center">Technical Stack</h2>
 
-<div align="center">
-
-![MySQL](https://img.shields.io/badge/MySQL-9.x-blue)
-
-</div>
-
 - **MySQL (v9.5.0)** — data cleaning, transformation, and exploratory analysis
