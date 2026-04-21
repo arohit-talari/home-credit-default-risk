@@ -4,7 +4,7 @@
 
 <h1 align="center">Home Credit Group - Characteristics of Default Behavior </h1>
 
-<h1 align="center">Project Overview</h1>
+<h2 align="center">Project Overview</h2>
 
 Home Credit Group is a global consumer finance company specializing in loans to underbanked borrowers — a population largely excluded from traditional credit markets due to limited or nonexistent credit histories. Without conventional credit scores, the core underwriting challenge is identifying which borrower characteristics reliably predict repayment behavior.
 
@@ -19,30 +19,30 @@ Seven distinct missingness scenarios required resolution before analysis could b
 The analysis identified a clear high-risk profile. Borrowers who are under 40, Low or Mid income, living in unstable housing, and carrying a debt-to-income ratio above 0.20 default at **14.30%** — **77%** above the **8.07%** portfolio benchmark. The low-risk profile defaults at **5.42%**. The **8.88 percentage point spread** between the two profiles gives underwriting teams a concrete, data-driven basis for separating borrowers who are likely to repay from those who aren't.
 
 ---
-<h1 align="center">Skills Demonstrated</h1>
+<h2 align="center">Skills Demonstrated</h2>
 
-<h2 align="left">Missing Value Strategy</h2>
+<h3 align="left">Missing Value Strategy</h3>
 
 Resolved seven distinct missingness scenarios across five strategies — each decision made on the specific characteristics of the column rather than a blanket rule applied uniformly across the dataset. The approach preserved analytical signal where uniform imputation would have obscured it.
 
-<h2 align="left">Financial Ratio Derivation</h2>
+<h3 align="left">Financial Ratio Derivation</h3>
 
 Identified DTI and LTV as the relevant risk metrics for this analytical question and constructed both from raw source fields — neither existed in the source data. Both ratios served as the primary quantitative inputs to segmentation and threshold analysis.
 
-<h2 align="left">Threshold Analysis</h2>
+<h3 align="left">Threshold Analysis</h3>
 
 Determined the point at which debt burden transitions from manageable to high-risk — testing default rates across progressive DTI bands until the inflection point became clear. The result is a concrete, defensible cutoff rather than a directional observation.
 
-<h2 align="left">Composite Risk Segmentation</h2>
+<h3 align="left">Composite Risk Segmentation</h3>
 
 Combined age, income tier, housing stability, and DTI into a multi-variable classification framework to define high and low-risk borrower profiles. The **8.88 percentage point spread** between profiles directly answers the core analytical question and gives underwriting teams a concrete basis for risk-tiered decision making.
 
-<h2 align="left">SQL Execution</h2>
+<h3 align="left">SQL Execution</h3>
 
 Extracted statistical benchmarks, borrower segments, and risk flags across 307,511 records — applying window functions, nested subqueries, and conditional logic to support every layer of the analysis, from data preparation through final risk profiling.
 
 ---
-<h1 align="center">Dataset</h1>
+<h2 align="center">Dataset</h2>
 
 The analysis uses the Home Credit Default Risk dataset — borrower-level application data capturing creditworthiness indicators across a large population of underbanked loan applicants. The original dataset spans 307,511 records across 122 columns, covering demographic, financial, employment, and behavioral attributes.
 
@@ -57,7 +57,7 @@ Before analysis began, the dataset was narrowed to a single-table structure of 2
 | **Structure** | Single-level analytical dataset |
 
 ---
-<h1 align="center">Data Cleaning Approach</h1>
+<h2 align="center">Data Cleaning Approach</h2>
 
 The data presented three structural issues that required resolution before any cleaning strategy could be applied.
 
@@ -80,7 +80,7 @@ With the core problems understood, the cleaning phase moved column by column acr
 With seven missingness scenarios resolved, encoding inconsistencies corrected, and anomalous records flagged rather than dropped, the data entering the EDA phase was structurally sound — each retained variable positioned to contribute directly to identifying what separates high-risk borrowers from low-risk ones.
 
 --- 
-<h1 align="center">Key Findings</h1>
+<h2 align="center">Key Findings</h2>
 
 **Portfolio benchmark: 8.07% default rate across 307,511 records**
 
@@ -121,14 +121,14 @@ Actively employed borrowers default at higher rates than unemployed and pensione
 Among organization types with more than 500 records, Transport carries the highest default rate at **15.75%** across 1,187 records — nearly double the portfolio benchmark. Restaurant (**11.71%**, 1,811 records) and Construction (**11.68%**, 6,721 records) follow, both characterized by irregular income and limited employment security. Employer industry type warrants inclusion as a standalone screening variable in credit underwriting decisions.
 
 ---
-<h1 align="center">Scripts</h1>
+<h2 align="center">Scripts</h2>
 
 - **[Data Cleaning Script](scripts/home_credit_data_cleaning.sql)**: Prepares the dataset for analysis by resolving missing values, correcting data inconsistencies, applying type conversions, and constructing derived variables.
 
 - **[Exploratory Data Analysis (EDA) Script](scripts/home_credit_eda.sql)**: Analyzes the cleaned dataset to identify borrower risk patterns, quantify default rate drivers, and generate the key findings presented in this project.
 
 ---
-<h1 align="center">Tools Used</h1>
+<h2 align="center">Tools Used</h2>
 
 <div align="center">
 
