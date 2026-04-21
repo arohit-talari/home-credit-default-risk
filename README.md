@@ -80,7 +80,7 @@ With the core problems understood, the cleaning phase moved column by column acr
 With seven missingness scenarios resolved, encoding inconsistencies corrected, and anomalous records flagged rather than dropped, the data entering the EDA phase was structurally sound — each retained variable positioned to contribute directly to identifying what separates high-risk borrowers from low-risk ones.
 
 --- 
-<h2 align="center">Key Findings</h2>
+<h2 align="center">Borrower Risk Analysis</h2>
 
 **Portfolio benchmark: 8.07% default rate across 307,511 records**
 
@@ -92,31 +92,31 @@ Two derived ratios serve as the primary financial inputs to the analysis. **Debt
 
 ---
 
-**Finding 1 — A defined borrower profile drives a 77% increase in default risk**
+<h3 align="center">Finding 1 — A defined borrower profile drives a 77% increase in default risk</h3>
 
-Borrowers under 40, in Low or Mid income tiers, living in unstable housing, and carrying a DTI above 0.20 represent the high-risk profile — defaulting at **14.30%**, 77% above the **8.07%** portfolio benchmark. The low-risk profile defaults at **5.42%**. The **8.88 percentage point spread** between the two directly answers the core analytical question — default risk in this portfolio concentrates not within any single variable, but at the intersection of demographic, financial, and stability factors combined.
+Borrowers under 40, in Low or Mid income tiers, living in unstable housing, and carrying a DTI above 0.20 represent the high-risk profile — defaulting at **14.30%**, **77%** above the **8.07%** portfolio benchmark. The low-risk profile defaults at **5.42%**. The **8.88 percentage point spread** between the two directly answers the core analytical question — default risk in this portfolio concentrates not within any single variable, but at the intersection of demographic, financial, and stability factors combined.
 
-**Finding 2 — Education level is the strongest demographic risk signal**
+<h3 align="left">Finding 2 — Education level is the strongest demographic risk signal</h3>
 
-Default rates range from **1.83%** at the academic degree level to **10.93%** at lower secondary — a nearly sixfold difference across the education spectrum. Secondary and secondary special borrowers default at **8.94%** across 218,391 records, making them the most consequential risk segment in the portfolio by volume. Education level captures long-term earning stability in a way that makes it a high-signal input for borrower segmentation.
+Default rates range from **1.83%** at the academic degree level to **10.93%** at lower secondary — a nearly sixfold difference across the education spectrum. Secondary and secondary special borrowers default at **8.94%** across 218,391 records, making them the most consequential risk segment in the portfolio by volume.
 
-**Finding 3 — Age and regional risk tier are the two most reliable standalone risk indicators**
+<h3 align="left">Finding 3 — Age and regional risk tier are the two most reliable standalone risk indicators</h3>
 
-Age declines without exception from **11.47%** among borrowers in their 20s (44,738 records) to **4.92%** among borrowers 60 and older (35,665 records) — every cohort lower than the one before it. Regional risk tiers follow the same pattern, scaling from **4.82%** in Low Risk regions (32,197 records) to **11.10%** in High Risk regions (48,330 records) — a **6.28 percentage point spread** across three tiers with no outlier breaking the sequence. When assessing a borrower's risk level in isolation, these are the two variables with the most consistent and reliable signal in the portfolio.
+Age declines without exception from **11.47%** among borrowers in their 20s (44,738 records) to **4.92%** among borrowers 60 and older (35,665 records) — every cohort lower than the one before it. Regional risk tiers follow the same pattern, scaling from **4.82%** in Low Risk regions (32,197 records) to **11.10%** in High Risk regions (48,330 records) — a **6.28 percentage point spread** across three tiers with no outlier breaking the sequence.
 
-**Finding 4 — DTI above 0.20 is the actionable financial threshold**
+<h3 align="left">Finding 4 — DTI above 0.20 is the actionable financial threshold</h3>
 
 Default risk accelerates meaningfully once a borrower's DTI exceeds 0.20 — establishing it as the primary financial signal for elevated risk. A borrower already carrying high debt relative to income who is also financing a purchase through debt rather than equity compounds that risk further. High DTI combined with High LTV produces a **12.66%** default rate across 5,127 records versus **7.33%** for Low DTI with Low LTV across 187,299 records. DTI above 0.20 flags the risk. Pairing it with high leverage amplifies it — though establishing a precise LTV threshold would require further analysis.
 
-**Finding 5 — Income tier alone is an unreliable standalone predictor**
+<h3 align="left">Finding 5 — Income tier alone is an unreliable standalone predictor</h3>
 
 Mid and Low income borrowers default at nearly identical rates — **8.55%** and **8.23%** respectively — a 0.32 percentage point gap that is not meaningful at the portfolio level. High income is the only tier where income reliably suppresses default risk, at **5.43%**. The convergence between Mid and Low isn't coincidental — Low income borrowers carry the highest average DTI in the dataset at 0.2369, while Mid income borrowers earning more still carry debt burdens that close the gap earnings alone would suggest exists. Below the High income threshold, what a borrower earns matters less than how much of it is already committed. Income without debt burden context produces incomplete risk conclusions.
 
-**Finding 6 — Housing instability is a stronger default driver than employment status**
+<h3 align="left">Finding 6 — Housing instability is a stronger default driver than employment status</h3>
 
 Actively employed borrowers default at higher rates than unemployed and pensioner borrowers across every housing type examined — a pattern that holds without exception regardless of housing category. Employed renters carry the highest rate in the cross at **12.55%** across 4,676 records, while employed borrowers living with parents follow at **11.80%** across 14,621 records. Unemployed and pensioner borrowers flag at **5.40%** — well below the portfolio benchmark — because the segment is predominantly pensioners with stable fixed income rather than borrowers with no income. Housing instability is a stronger default driver than employment status in this portfolio, a finding that directly challenges conventional underwriting assumptions.
 
-**Finding 7 — Employer industry type is a meaningful and underutilized risk signal**
+<h3 align="left">Finding 7 — Employer industry type is a meaningful and underutilized risk signal</h3>
 
 Among organization types with more than 500 records, Transport carries the highest default rate at **15.75%** across 1,187 records — nearly double the portfolio benchmark. Restaurant (**11.71%**, 1,811 records) and Construction (**11.68%**, 6,721 records) follow, both characterized by irregular income and limited employment security. Employer industry type warrants inclusion as a standalone screening variable in credit underwriting decisions.
 
