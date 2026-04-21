@@ -57,15 +57,15 @@ Before analysis began, the dataset was narrowed to a single analytical table of 
 | **Structure** | Single-level analytical dataset |
 
 ---
-<h2 align="center">Data Cleaning Approach</h2>
+<h2 align="center">Data Cleaning & Transformation</h2>
 
-The data presented three structural issues that required resolution before any cleaning strategy could be applied.
+Upon loading the data into MySQL, a diagnostic pass identified three structural issues that required resolution before any cleaning strategy could be applied.
 
-Prior to loading the data, a diagnostic pass identified seven columns carrying missing values. Once loaded into MySQL, null counts across all seven returned zero — empty strings had come in as empty strings rather than NULL, meaning the null framework the entire cleaning phase depended on had to be established before a single strategy could be executed.
+The first was foundational. Seven columns were confirmed to carry missing values prior to load — yet null counts across all seven returned zero once inside MySQL. Empty strings had come in as empty strings rather than NULL, meaning the structure MySQL needed to recognize missing values had to be established before a single strategy could be executed.
 
-With the null structure in place, two deeper problems emerged. 18% of the data carried an unusable placeholder value in a column central to employment-based analysis — present at a scale large enough that any query run against it uncorrected would have produced wrong conclusions. Separately, a large share of null values across the dataset didn't represent missing data — they represented a real and identifiable borrower category that had no label, and would have disappeared entirely without intervention.
+With that structure in place, two deeper problems emerged. **18%** of the dataset carried an unusable placeholder value in a column central to employment-based analysis — a scale that would have corrupted every employment-based finding without correction. Separately, a large share of null values across the dataset didn't represent missing data — they represented a real and identifiable borrower category that would have disappeared entirely without intervention. The clearest illustration of this: EXT_SOURCE_3 carried 60,965 nulls where the missingness itself correlated with a higher default rate — **9.3%** where null versus **7.8%** where present — making imputation the wrong call.
 
-With the core problems understood, the cleaning phase moved column by column across all seven. Missingness ranged from 2 records to 202,924 — a uniform approach would have treated fundamentally different problems identically and masked the signals that mattered most. Each column was evaluated on its own terms and handled accordingly.
+With the core problems understood, the cleaning phase moved column by column across all seven. Missingness ranged from **2 records to 202,924** — a uniform approach would have treated fundamentally different problems identically. Each column was evaluated on its own terms and handled accordingly.
 
 | Strategy | Column | Decision |
 |---|---|---|
@@ -73,7 +73,7 @@ With the core problems understood, the cleaning phase moved column by column acr
 | Median imputation | EXT_SOURCE_2 | 660 nulls · imputed median 0.5660 |
 | Fixed-value imputation | CNT_FAM_MEMBERS | 2 nulls · imputed 1.0 — single-person household |
 | Flag, do not impute | AMT_GOODS_PRICE | 278 nulls · all revolving loans — structurally valid absence |
-| Flag, do not impute | EXT_SOURCE_3 | 60,965 nulls · missingness non-random — default rate 9.3% where null vs. 7.8% where present |
+| Flag, do not impute | EXT_SOURCE_3 | 60,965 nulls · missingness non-random — flagged, not imputed |
 | Reclassification | OCCUPATION_TYPE | 96,391 nulls · overlap with DAYS_EMPLOYED anomaly · reclassified as 'Not Employed / Unknown' |
 | Structural validation | OWN_CAR_AGE | 202,924 nulls · maps directly to FLAG_OWN_CAR = N — structurally valid |
 
