@@ -23,23 +23,23 @@ The analysis identified a clear high-risk profile. Borrowers who are under 40, L
 
 <h3 align="left">Missing Value Strategy</h3>
 
-Resolved seven distinct missingness scenarios across five strategies — each decision made on the specific characteristics of the column rather than a blanket rule applied uniformly across the dataset. The approach preserved analytical signal where uniform imputation would have obscured it.
+Resolved seven distinct missingness scenarios across five strategies — each decision made on the specific characteristics of the column rather than a blanket rule applied uniformly across the data.
 
 <h3 align="left">Financial Ratio Derivation</h3>
 
-Identified DTI and LTV as the relevant risk metrics for this analytical question and constructed both from raw source fields — neither existed in the source data. Both ratios served as the primary quantitative inputs to segmentation and threshold analysis.
+Identified Debt-to-income (DTI) and Loan-to-value (LTV) as the relevant risk metrics for this analytical question and constructed both from raw source fields — neither existed in the source data. Both ratios served as the primary quantitative inputs to segmentation and threshold analysis.
 
 <h3 align="left">Threshold Analysis</h3>
 
-Determined the point at which debt burden transitions from manageable to high-risk — testing default rates across progressive DTI bands until the inflection point became clear. The result is a concrete, defensible cutoff rather than a directional observation.
+Determined the point at which debt burden transitions from manageable to high-risk — testing default rates across progressive DTI bands until the inflection point became clear.
 
 <h3 align="left">Composite Risk Segmentation</h3>
 
-Combined age, income tier, housing stability, and DTI into a multi-variable classification framework to define high and low-risk borrower profiles. The **8.88 percentage point spread** between profiles directly answers the core analytical question and gives underwriting teams a concrete basis for risk-tiered decision making.
+Combined age, income tier, housing stability, and DTI into a borrower profile framework to define high and low-risk segments. The **8.88 percentage point spread** between the two directly answers the core analytical question and gives underwriting teams a concrete basis for separating borrowers by risk level before making lending decisions.
 
 <h3 align="left">SQL Execution</h3>
 
-Extracted statistical benchmarks, borrower segments, and risk flags across 307,511 records — applying window functions, nested subqueries, and conditional logic to support every layer of the analysis, from data preparation through final risk profiling.
+Extracted statistical benchmarks, borrower segments, and risk flags across **307,511 records** — applying window functions, nested subqueries, and conditional logic to support every layer of the analysis, from data preparation through final risk profiling.
 
 ---
 <h2 align="center">Dataset</h2>
