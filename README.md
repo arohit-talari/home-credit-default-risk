@@ -38,7 +38,7 @@ Before analysis began, the dataset was narrowed to a single analytical table of 
 
 <h3 align="left">Missing Value Strategy</h3>
 
-Resolved seven distinct missingness scenarios across five strategies — each decision made on the specific characteristics of the column rather than a blanket rule applied uniformly across the data.
+Resolved seven distinct missingness scenarios across five strategies, with each decision made on the specific characteristics of the column rather than a blanket rule applied uniformly across the data.
 
 <h3 align="left">Financial Ratio Derivation</h3>
 
@@ -46,7 +46,7 @@ Identified **Debt-to-income (DTI)** and **Loan-to-value (LTV)** as the relevant 
 
 <h3 align="left">Threshold Analysis</h3>
 
-Determined the point at which debt burden transitions from manageable to high-risk — testing default rates across progressive DTI bands until the inflection point became clear.
+Determined the point at which debt burden transitions from manageable to high-risk by testing default rates across progressive DTI bands until the inflection point became clear.
 
 <h3 align="left">Composite Risk Segmentation</h3>
 
@@ -54,7 +54,7 @@ Combined age, income tier, housing stability, and DTI into a borrower profile fr
 
 <h3 align="left">SQL Execution</h3>
 
-Extracted statistical benchmarks, borrower segments, and risk flags across **307,511 records** — applying window functions, nested subqueries, and conditional logic to support every layer of the analysis, from data preparation through final risk profiling.
+Extracted statistical benchmarks, borrower segments, and risk flags across **307,511 records** by applying window functions, nested subqueries, and conditional logic to support every layer of the analysis, from data preparation through final risk profiling.
 
 ---
 <h2 align="center">Data Cleaning & Transformation</h2>
