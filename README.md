@@ -63,9 +63,9 @@ Upon loading the data into MySQL, a diagnostic pass identified three structural 
 
 The first was foundational. Seven columns were confirmed to carry missing values prior to load — yet null counts across all seven returned zero once inside MySQL. Empty strings had come in as empty strings rather than NULL, meaning the structure MySQL needed to recognize missing values had to be established before a single strategy could be executed.
 
-With that structure in place, two deeper problems emerged. **18%** of the dataset carried an unusable placeholder value in a column central to employment-based analysis — a scale that would have corrupted every employment-based finding without correction. Separately, a large share of null values across the dataset didn't represent missing data — they represented a real and identifiable borrower category that would have disappeared entirely without intervention. The clearest illustration of this: EXT_SOURCE_3 carried 60,965 nulls where the missingness itself correlated with a higher default rate — **9.3%** where null versus **7.8%** where present — making imputation the wrong call.
+With that structure in place, two deeper problems emerged. **18%** of the data carried an unusable placeholder value in a column central to employment-based analysis, a scale that would have corrupted every employment-based finding without correction. Separately, a large share of null values across the dataset didn't represent missing data — they represented a real and identifiable borrower category that would have disappeared entirely without intervention. The clearest illustration of this: EXT_SOURCE_3 carried 60,965 nulls where the missingness itself correlated with a higher default rate, **9.3%** where null versus **7.8%** where present, making imputation the wrong call.
 
-With the core problems understood, the cleaning phase moved column by column across all seven. Missingness ranged from **2 records to 202,924** — a uniform approach would have treated fundamentally different problems identically. Each column was evaluated on its own terms and handled accordingly.
+With the core problems understood, the cleaning phase moved column by column across all seven. Missingness ranged from **2 records to 202,924**. A uniform approach would have treated fundamentally different problems identically. Each column was evaluated on its own terms and handled accordingly.
 
 | Strategy | Column | Decision |
 |---|---|---|
@@ -77,7 +77,7 @@ With the core problems understood, the cleaning phase moved column by column acr
 | Reclassification | `occupation_type` | 96,391 nulls · `days_employed` overlap · reclassified 'Not Employed / Unknown' |
 | Structural validation | `own_car_age` | 202,924 nulls · maps directly to `flag_own_car` = N — structurally valid |
 
-With seven missingness scenarios resolved, encoding inconsistencies corrected, and anomalous records flagged rather than dropped, the data entering the EDA phase was structurally sound — each retained variable positioned to contribute directly to identifying what separates high-risk borrowers from low-risk ones.
+With seven missingness scenarios resolved, encoding inconsistencies corrected, and anomalous records flagged rather than dropped, the data entering the EDA phase was structurally sound, with each retained variable positioned to contribute directly to identifying what separates high-risk borrowers from low-risk ones.
 
 --- 
 <h2 align="center">Borrower Risk Analysis</h2>
