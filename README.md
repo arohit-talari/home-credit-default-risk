@@ -21,7 +21,7 @@ The analysis identified a clear high-risk profile. Borrowers who are under 40, L
 ---
 <h2 align="center">Dataset & Scope</h2>
 
-The analysis uses the Home Credit Default Risk dataset — borrower-level application data capturing creditworthiness indicators across a large population of underbanked loan applicants. The original dataset spans **307,511 records** across 122 columns, covering demographic, financial, employment, and behavioral attributes.
+The analysis uses the Home Credit Default Risk dataset, borrower-level application data capturing creditworthiness indicators across a large population of underbanked loan applicants. The original dataset spans **307,511 records** across 122 columns, covering demographic, financial, employment, and behavioral attributes.
 
 Before analysis began, the dataset was narrowed to a single analytical table of 25 columns. The full scoping rationale and exclusion decisions are documented in the Data Cleaning section.
 
